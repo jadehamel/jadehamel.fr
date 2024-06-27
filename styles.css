@@ -1,0 +1,119 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    background-color: #ffebf7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #ff1493;
+    text-shadow: 2px 2px #ff69b4;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ff1493;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #ff69b4;
+    text-shadow: 1px 1px #ff1493;
+    margin-bottom: 10px;
+}
+
+.game-card, .project-card {
+    background: #fff0f5;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px 0; /* Added margin to create space between cards */
+}
+
+.game-card:hover, .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3, .game-card h3 {
+    font-size: 1.8rem;
+    color: #ff1493;
+    margin-bottom: 10px;
+}
+
+.project-card p, .game-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-card a, .game-card a {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff69b4;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-card a:hover, .game-card a:hover {
+    background-color: #ff1493;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #ff1493;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .project-card h3, .game-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-card p, .game-card p {
+        font-size: 0.9rem;
+    }
+
+    .project-card a, .game-card a {
+        font-size: 0.9rem;
+    }
+}
