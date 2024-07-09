@@ -1,119 +1,199 @@
-/* Resetting default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes float {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-20px);}
+  100% {transform: translateY(0px);}
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 body {
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    background-color: #ffebf7;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFF0F5;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
-
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
 header {
-    text-align: center;
-    margin-bottom: 20px;
+  background: linear-gradient(-45deg, #FF69B4, #FF1493, #FF69B4, #FFC0CB);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #FFC0CB 3px solid;
+  position: relative;
+  overflow: hidden;
 }
-
+header::before {
+  content: '🍍';
+  font-size: 150px;
+  position: absolute;
+  opacity: 0.1;
+  top: -20px;
+  left: -20px;
+  animation: spin 20s linear infinite;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+header a:hover {
+  color: #FFB6C1;
+  transform: scale(1.1);
+}
 header h1 {
-    font-size: 3rem;
-    color: #ff1493;
-    text-shadow: 2px 2px #ff69b4;
+  font-family: 'Pacifico', cursive;
+  margin: 0;
+  text-align: center;
+  animation: float 6s ease-in-out infinite;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
-
-header p {
-    font-size: 1.2rem;
-    color: #ff1493;
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
-
-main {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
+nav li {
+  margin: 10px 20px;
+}
+.highlight {
+  color: #FF1493;
+  font-weight: bold;
+}
+.projects, .music, .youtube {
+  margin-top: 40px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.projects:hover, .music:hover, .youtube:hover {
+  transform: translateY(-10px);
+}
+.project-card, .video-card {
+  border: 1px solid #FFC0CB;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, #fff, #FFF0F5);
+}
+.project-card:hover, .video-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+}
+.project-card h3, .video-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0;
+  color: #FF69B4;
+}
+.btn {
+  display: inline-block;
+  background: #FF69B4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+.btn:hover {
+  background: #FF1493;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+}
+.spotify-embed, .youtube-embed {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.spotify-embed {
+  height: 380px;
+}
+.youtube-embed {
+  height: 315px;
+}
 h2 {
-    font-size: 2.5rem;
-    color: #ff69b4;
-    text-shadow: 1px 1px #ff1493;
-    margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: #FF1493;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
 }
-
-.game-card, .project-card {
-    background: #fff0f5;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin: 10px 0; /* Added margin to create space between cards */
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #FF69B4;
+  margin: 10px auto;
 }
-
-.game-card:hover, .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.code-snippet {
+  font-family: 'Source Code Pro', monospace;
+  background-color: #f4f4f4;
+  border-left: 3px solid #FF69B4;
+  padding: 15px;
+  margin: 10px 0;
+  overflow-x: auto;
 }
-
-.project-card h3, .game-card h3 {
-    font-size: 1.8rem;
-    color: #ff1493;
-    margin-bottom: 10px;
+.skill-meter {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  height: 20px;
+  margin-bottom: 10px;
 }
-
-.project-card p, .game-card p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 10px;
+.skill-progress {
+  background-color: #FF69B4;
+  border-radius: 20px;
+  height: 100%;
+  width: 0;
+  transition: width 1s ease-in-out;
 }
-
-.project-card a, .game-card a {
-    font-size: 1rem;
-    color: #fff;
-    background-color: #ff69b4;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.project-card a:hover, .game-card a:hover {
-    background-color: #ff1493;
-}
-
-footer {
-    margin-top: 20px;
-    text-align: center;
-}
-
-footer p {
-    font-size: 1rem;
-    color: #ff1493;
-}
-
 @media (max-width: 768px) {
-    h2 {
-        font-size: 2rem;
-    }
-
-    .project-card h3, .game-card h3 {
-        font-size: 1.5rem;
-    }
-
-    .project-card p, .game-card p {
-        font-size: 0.9rem;
-    }
-
-    .project-card a, .game-card a {
-        font-size: 0.9rem;
-    }
+  header h1 {
+    font-size: 2em;
+  }
+  nav li {
+    margin: 5px 10px;
+  }
+  .container {
+    width: 95%;
+  }
 }

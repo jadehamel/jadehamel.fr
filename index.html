@@ -1,116 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jade Hamel</title>
+<meta charset="UTF-8">
+<title>Jade Hamel - Music, Apps, Channels</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Jade Hamel</h1>
+    <div class="container">
+      <h1>Jade Hamel</h1>
+      <nav>
+        <ul>
+          <li><a class="btn" href="#collabs">Collabs</a></li>
+          <li><a class="btn" href="#projects">Apps</a></li>
+          <li><a class="btn" href="#music">Music</a></li>
+          <li><a class="btn" href="#youtube">YouTube</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section id="about">
-      <h2>Partnership Contacts</h2>
-      <div class="game-card">
-        <p>
-           <a href="https://pineapple.fans" target="_blank">Agency (Collabs, Booking & Marketing)</a>
-           <a href="https://www.believe.com" target="_blank">Producer</a>
-           <a href="https://www.tunecore.com" target="_blank">Publisher</a>
-        </p>
+  <div class="container">
+    <section id="collabs" class="projects">
+      <h3>Agency (Collabs, Booking & Sponsors)</h3>
+      <div class="project-card">
+        <a class="btn" href="https://pineapple.fans" target="_blank">Pineapple.Fans Agency</a>
+        <a class="btn" href="https://www.believe.com" target="_blank">Producer</a>
+        <a class="btn" href="https://www.tunecore.com" target="_blank">Distributor</a>
       </div>
     </section>
-    <section id="about">
-      <h2>Listen on Spotify</h2>
-      <div class="game-card">
-        <p><a href="https://open.spotify.com/intl-fr/artist/00x1E8tJVkW8Y1baJafklw" target="_blank">Artist page</a>
-           <a href="https://open.spotify.com/intl-fr/track/6Lj5H3IYfZ3vkoLGWbVLJB" target="_blank">Single</a>
-        </p>
+    <section id="music" class="music">
+      <h2>My Music</h2>
+      <p>Check out my latest tracks on Spotify:</p>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6Lj5H3IYfZ3vkoLGWbVLJB?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+    <section id="youtube" class="youtube">
+      <h2>YouTube Channel: @JadeThePineapple</h2>
+      <p><a class="btn" href="https://youtube.com/@JadeThePineapple" target="_blank">Subscribe to my channel</a></p>
+      <iframe src="https://www.youtube.com/embed/videoseries?si=j_imqW4lZeX8e-wS&amp;list=PLUSx2kPNkrV1PiGUaaTH5dVlbt5k3SrDA" class="youtube-embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h3>Recent Videos</h3>
+      <div class="video-card">
+        <h3>The Amazing Digital Circus Scary Candy Carrier is a song about the Episode 2 of the Amazing Digital Circus.</p>
+        <a href="https://www.youtube.com/watch?v=vjyfTRt5KKM" class="btn">Watch Now</a>
       </div>
     </section>
-    <section id="about">
-      <h2>Youtube Channel</h2>
-      <div class="game-card">
-        <p><a href="https://youtube.com/@JadeThePineapple" target="_blank">Jade The Pineapple</a>
-        </p>
-      </div>
-    </section>
-    <section id="projects">
+    <section id="projects" class="projects">
       <h2>Javascript Games and Tools</h2>
       <div class="project-card">
         <h3>Simple customizable A.I. Agent</h3>
         <p>Supported: ChatGPT, Llama and any custom you have access to</p>
-        <a href="https://ai.jadehamel.fr" target="_blank">DEMO</a>
-        <a href="https://github.com/jadehamel/SuperSimpleChatgptAgent" target="_blank">CODE</a>
+        <a class="btn" href="https://ai.jadehamel.fr" target="_blank">DEMO</a>
+        <a class="btn" href="https://github.com/jadehamel/SuperSimpleChatgptAgent" target="_blank">CODE</a>
       </div>
       <div class="project-card">
         <h3>ETH Public Key to Private Brute Force</h3>
         <p>Javascript or Quantum brute-forcing the Ethereum private key corresponding to a given public key x-coordinate on the SECP256K1 elliptic curve.</p>
-        <a href="https://ethbruteforce.jadehamel.fr/" target="_blank">DEMO</a>
-        <a href="https://github.com/jadehamel/ETHPublicKeyBruteForce" target="_blank">CODE</a>
+        <a class="btn" href="https://ethbruteforce.jadehamel.fr/" target="_blank">DEMO</a>
+        <a class="btn" href="https://github.com/jadehamel/ETHPublicKeyBruteForce" target="_blank">CODE</a>
       </div>
       <div class="project-card">
         <h3>StoryChoicesJs</h3>
         <p>Client-side customizable game where players create their own story through interactive choices.</p>
-        <a href="https://story.pineapple.fans" target="_blank">DEMO</a>
-        <a href="https://github.com/jadehamel/StoryChoicesJs" target="_blank">CODE</a>
+        <a class="btn" href="https://story.pineapple.fans" target="_blank">DEMO</a>
+        <a class="btn" href="https://github.com/jadehamel/StoryChoicesJs" target="_blank">CODE</a>
       </div>
       <div class="project-card">
         <h3>CryptoScan</h3>
         <p>Bulk-Generate as many random public and their private keys for Ethereum, Litecoin and Dogecoin. Links to blockchain explorer also generated to quick view wallets content</p>
-        <a href="https://scan.pineapple.fans" target="_blank">DEMO</a>
-        <a href="https://github.com/jadehamel/walletscan" target="_blank">CODE</a>
+        <a class="btn" href="https://scan.pineapple.fans" target="_blank">DEMO</a>
+        <a class="btn" href="https://github.com/jadehamel/walletscan" target="_blank">CODE</a>
       </div>
       <div class="project-card">
         <h3>Lang Exchange Tracker</h3>
         <p>A simple web application that helps users track their language exchange partners and log their conversation sessions. The app is built with HTML, CSS, and JavaScript, and it works entirely on the client-side using local storage.</p>
-        <a href="https://jadehamel.fr/LangExchangeTracker" target="_blank">DEMO</a>
-        <a href="https://github.com/jadehamel/LangExchangeTracker" target="_blank">CODE</a>
+        <a class="btn" href="https://jadehamel.fr/LangExchangeTracker" target="_blank">DEMO</a>
+        <a class="btn" href="https://github.com/jadehamel/LangExchangeTracker" target="_blank">CODE</a>
       </div>
-      <div class="game-card">
+      <div class="project-card">
         <h3>PLAY Flappy Bird</h3>
         <p>Instructions: Use Spacebar to jump</p>
-        <a href="https://demo.pineapple.fans/SimpleFlappyBird.html" target="_blank">DEMO</a>
-        <a href="https://github.com/jadehamel/FlappyBirdHtml" target="_blank">CODE</a>
+        <a class="btn" href="https://demo.pineapple.fans/SimpleFlappyBird.html" target="_blank">DEMO</a>
+        <a class="btn" href="https://github.com/jadehamel/FlappyBirdHtml" target="_blank">CODE</a>
       </div>
-      <div class="game-card">
+      <div class="project-card">
         <h3>PLAY Arkanoid</h3>
         <p>Instructions: Use right & Left Arrow Keys to move the bar</p>
-        <a href="https://demo.pineapple.fans/SimpleArkanoid.html" target="_blank">DEMO</a>
-        <a href="https://github.com/jadehamel/SimpleArkanoid" target="_blank">CODE</a>
+        <a class="btn" href="https://demo.pineapple.fans/SimpleArkanoid.html" target="_blank">DEMO</a>
+        <a class="btn" href="https://github.com/jadehamel/SimpleArkanoid" target="_blank">CODE</a>
       </div>
-      <div class="game-card">
+      <div class="project-card">
         <h3>PLAY Pong</h3>
         <p>Instructions: Use Top & Bottom Arrow Keys to move the bar</p>
-        <a href="https://demo.pineapple.fans/SimplePong.html" target="_blank">DEMO</a>
-        <a href="https://github.com/jadehamel/SimpleJsPongGame" target="_blank">CODE</a>
+        <a class="btn" href="https://demo.pineapple.fans/SimplePong.html" target="_blank">DEMO</a>
+        <a class="btn" href="https://github.com/jadehamel/SimpleJsPongGame" target="_blank">CODE</a>
       </div>
-      <div class="game-card">
+      <div class="project-card">
         <h3>PLAY Snake</h3>
         <p>Instructions: Use Arrow Keys to control the snake</p>
-        <a href="https://demo.pineapple.fans/SimpleSnake.html" target="_blank">DEMO</a>
-        <a href="https://github.com/jadehamel/SimpleJsSnakeGame" target="_blank">CODE</a>
+        <a class="btn" href="https://demo.pineapple.fans/SimpleSnake.html" target="_blank">DEMO</a>
+        <a class="btn" href="https://github.com/jadehamel/SimpleJsSnakeGame" target="_blank">CODE</a>
       </div>
       <div class="project-card">
         <h3>GITHUB</h3>
         <p>My Open Source Projects</p>
-        <a href="https://github.com/jadehamel" target="_blank">MY GITHUB PROFILE</a>
+        <a class="btn" href="https://github.com/jadehamel" target="_blank">MY GITHUB PROFILE</a>
       </div>
     </section>
-    <section id="roblox-game">
+    <section id="roblox-game" class="projects">
       <h2>My Roblox Game</h2>
-      <div class="game-card">
+      <div class="project-card">
         <h3>Quantum Obby</h3>
-        <p><a href="https://QuantumObby.com" target="_blank">QuantumObby.com | Community & News</a></p>
+        <p><a class="btn" href="https://QuantumObby.com" target="_blank">QuantumObby.com | Community & News</a></p>
         <p>Escape Quantum Universe Game</p>
         <p>OBBY: Race through chaos, overcoming obstacles in a universe disrupted by a menacing black hole. Embark on an obstacle course in a chaotic universe, disrupted since the emergence of a black hole that has thrown our world into disarray. In this challenging race, you'll strive to escape from this corrupted realm by attempting to navigate back through the black hole.</p>
         <p>ALL AGES (Suitable for everyone)</p>
       </div>
     </section>
-  </main>
+<!--     <section id="skills" class="skills">
+      <h2>My Skills</h2>
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <div class="skill-meter">
+          <div class="skill-progress" style="width: 0%;" data-width="95%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>Music Production</h3>
+        <div class="skill-meter">
+          <div class="skill-progress" style="width: 0%;" data-width="90%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>Video Editing</h3>
+        <div class="skill-meter">
+          <div class="skill-progress" style="width: 0%;" data-width="85%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>Python</h3>
+        <div class="skill-meter">
+          <div class="skill-progress" style="width: 0%;" data-width="80%"></div>
+        </div>
+      </div>
+    </section> -->
+  </div>
   <footer>
-    <p>&copy; 2024 Jade Hamel</p>
+    <div class="container">
+      <p>&copy; 2023 Jade Hamel. All rights reserved.</p>
+    </div>
   </footer>
   <script src="script.js"></script>
 </body>
